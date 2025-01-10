@@ -55,6 +55,26 @@ Igala_dictionary={"Gba":'take',
               "Eti" : 'Ear',
               "Oli" : 'Tree',
               "L'olu" : 'Sleep'}
+Hausa_dictionary={"zo" : 'come'
+                  "tafi" : 'go',
+                  "abinchi" : 'food',
+                  "shiga" : 'enter',
+                  "gudu" : 'run',
+                  "waya" : 'phone',
+                  "ni" : 'me',
+                  "su" : 'them',
+                  "shi" : 'him',
+                  "ita" : 'her',
+                  "lemu" : 'orange',
+                  "daba" : 'animal',
+                  "kujera" : 'chair',
+                  "takalmi" : 'chair',
+                  "waje" : 'outside',
+                  "kalmomi" :'alphabets',
+                  "fanca" :'fan',
+                  "kasa" : 'sand',
+                  "allo" : 'board',
+                  "shiga" : 'enter',
    from tkinter import  TK, Entry, Button,Label,StringVar
    
     window=TK()
