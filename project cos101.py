@@ -74,7 +74,7 @@ Hausa_dictionary={"zo" : 'come'
                   "fanca" :'fan',
                   "kasa" : 'sand',
                   "allo" : 'board',
-                  "shiga" : 'enter',
+                  "shiga" : 'enter'}
    from tkinter import  TK, Entry, Button,Label,StringVar
    
     window=TK()
