@@ -35,7 +35,56 @@ Spanish_dictionary ={"hola": 'hello',
                      "comida":'food',
                      "casco":'helmet',
                      "zapatos":'shoes'}
-
+Igala_dictionary={"Gba":'take',        
+              "Oskapa" : 'Rice',
+              "Oji" : 'Head',
+              "Eju" : 'Face',
+              "Efu" : 'Stomach',
+              "Ehi" : 'Cook',
+              "Adide" : 'Guard',
+              "Ojika" : 'Shoulder',
+              "Okwukwu" : 'Kneel',
+              "Agba" : 'Jaw',
+              "Ubi" : 'Back',
+              "Imi" : 'Breath',
+              "Imo" : 'Nose',
+              "Unyi" : 'House',
+              "Ule era" : 'Run',
+              "Agba" : 'Thank you',
+              "Omi" : 'Fish',
+              "Eti" : 'Ear',
+              "Oli" : 'Tree',
+              "L'olu" : 'Sleep'}
+   from tkinter import  TK, Entry, Button,Label,StringVar
+   
+    window=TK()
+    window.geometry("688×255")
+    window.title("Igala_dictionary")
+    
+    word.Stringvar()
+    word_entry.Entry(window,textvariable=word,font.('ariel',19))
+    word_entry.pack()
+    
+    result=StringVar()
+    result_label=Label(window, textvariable=result)
+    result_label.pack()
+    
+    def search (word):
+        if word in Igala_dictionary:
+            result.set(Igala_dictionary[word])
+            print(Igala_dictionary[word])
+        else:
+            result.set("not found")
+            
+    search_btn=Button(window, text="search", command=lambda: search(word.get()))
+    search_btn.pack
+    
+    exit_button=Button(window,text="exit",command=lambda: exit())
+    exit_button.pack()
+    
+    word_entry=Entry(window, textvariable=word, font=('ariel', 19))
+    window.mainloop()
+    
 from tkinter import Tk, Entry, Button, Label, StringVar,Menubutton,Menu
 
 window = Tk()
