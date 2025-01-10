@@ -119,7 +119,24 @@ def openNewWindow():
 
     search_btn = Button(window, text="search", command=lambda: search(word.get()))
     search_btn.pack()
-  
+word.Stringvar()
+    word_entry.Entry(window,textvariable=word,font.('ariel',19))
+    word_entry.pack()
+    
+    result=StringVar()
+    result_label=Label(window, textvariable=result)
+    result_label.pack()
+    
+    def search (word):
+        if word in Igala_dictionary:
+            result.set(Igala_dictionary[word])
+            print(Igala_dictionary[word])
+        else:
+            result.set("not found")
+            
+    search_btn=Button(window, text="search", command=lambda: search(word.get()))
+    search_btn.pack
+
 def spanish():
      word = StringVar()
      word_entry = Entry(window, textvariable=word, font=('ariel', 19))
