@@ -18,6 +18,24 @@ Igbo_dictionary = {"bia": 'come',
                    "ekpere": 'prayer',
                    "ego": 'money',
                    "chukwu": 'God'}
+
+Spanish_dictionary ={"hola": 'hello',
+                     "adios": 'goodbye',
+                     "gracias":'thank you',
+                     "por favor":'please',
+                     "si": 'yes',
+                     "no":'no',
+                     "buenos dias":'good morning',
+                     "buenas noches":'good night',
+                     "lo siento":'I am sorry',
+                     "familia":'family',
+                     "amigo":'friend',
+                     "luz":'light',
+                     "agua":'water',
+                     "comida":'food',
+                     "casco":'helmet',
+                     "zapatos":'shoes'}
+
 from tkinter import Tk, Entry, Button, Label, StringVar,Menubutton,Menu
 
 window = Tk()
@@ -52,9 +70,32 @@ def openNewWindow():
 
     search_btn = Button(window, text="search", command=lambda: search(word.get()))
     search_btn.pack()
+  
+def spanish():
+     word = StringVar()
+     word_entry = Entry(window, textvariable=word, font=('ariel', 19))
+     word_entry.pack()
 
+
+     result = StringVar()
+     result_label = Label(window, textvariable=result)
+     result_label.pack()
+
+
+     def search (word):
+        if word in Spanish_dictionary:
+            result.set(Spanish_dictionary[word])
+            print(Spanish_dictionary[word])
+        else:
+            result.set("not found")
+            
+     search_btn = Button(window, text="search", command=lambda: search(word.get()))
+     search_btn.pack()
 mb.menu.add_command(label="Igbo dictionary",command=(openNewWindow))
 mb.pack()
+
+menu2_btn=Button(window,text="spanish Language",command=(spanish))
+menu2_btn.pack() 
 
 window.mainloop()
 
